@@ -1,0 +1,12 @@
+{
+  "name": "Bode",
+  "short_name": "Bode",
+  "id": "com.example.gamename",
+  "description": "You increase in size as you consume the red balls till you either fall off or hit the spikes which will make you go poof",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}

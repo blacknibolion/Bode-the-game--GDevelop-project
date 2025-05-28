@@ -992,9 +992,9 @@
       "effects": [],
       "behaviors": [
         {
-          "extraBorder": 100,
           "name": "DestroyOutside",
-          "type": "DestroyOutsideBehavior::DestroyOutside"
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 100
         },
         {
           "isFolded": true,
@@ -1315,7 +1315,13 @@
     ]
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "BallsDestroyed",
+      "type": "number",
+      "value": 0
+    }
+  ],
   "layouts": [
     {
       "b": 209,
@@ -1341,7 +1347,13 @@
         "windowMask": false
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "GameOver",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -1480,7 +1492,7 @@
           "depth": 1,
           "height": 41,
           "keepRatio": true,
-          "layer": "Game",
+          "layer": "Decoration",
           "name": "Bush1",
           "persistentUuid": "684781ae-4c3b-41a8-bd94-957522404b48",
           "width": 88,
@@ -1497,7 +1509,7 @@
           "depth": 1,
           "height": 157,
           "keepRatio": true,
-          "layer": "Game",
+          "layer": "Decoration",
           "name": "PalmTree",
           "persistentUuid": "10ac046a-cd06-4517-9d80-f7391f125df4",
           "width": 104,
@@ -1509,7 +1521,7 @@
           "initialVariables": []
         },
         {
-          "angle": 0,
+          "angle": 315,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -1517,8 +1529,8 @@
           "name": "Spike",
           "persistentUuid": "9331254c-38ac-4851-8d76-d37c5cace75f",
           "width": 0,
-          "x": 272,
-          "y": 269,
+          "x": 173,
+          "y": 275,
           "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
@@ -1603,7 +1615,7 @@
           "persistentUuid": "fd3edbb4-8d6b-4bab-b6a0-8f615453ed8a",
           "width": 164,
           "x": 391,
-          "y": 253,
+          "y": 285,
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
@@ -1670,7 +1682,7 @@
           "name": "ground",
           "persistentUuid": "067c66a7-fe2e-4c4c-bec6-912d3cf63274",
           "width": 164,
-          "x": 1079,
+          "x": 1032,
           "y": 536,
           "zOrder": 15,
           "numberProperties": [],
@@ -1683,12 +1695,12 @@
           "depth": 1,
           "height": 50,
           "keepRatio": true,
-          "layer": "Game",
+          "layer": "Decoration",
           "name": "Bush4",
           "persistentUuid": "f000cae3-b8b3-4cf2-8c03-f2e74f51066c",
           "width": 53,
           "x": 498,
-          "y": 209,
+          "y": 239,
           "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
@@ -1703,73 +1715,9 @@
           "name": "Player",
           "persistentUuid": "4d65c648-19e9-416c-91a5-33c455bb5542",
           "width": 0,
-          "x": 57,
+          "x": 5,
           "y": 459,
           "zOrder": 17,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "Game",
-          "name": "Ball",
-          "persistentUuid": "fc296d5b-3ec6-4d5e-9b23-2633cd824ac8",
-          "width": 0,
-          "x": 544,
-          "y": 416,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "Game",
-          "name": "Ball",
-          "persistentUuid": "f3af994e-f8a7-45cb-8c67-c574e859b3fc",
-          "width": 0,
-          "x": 480,
-          "y": 416,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "Game",
-          "name": "Ball",
-          "persistentUuid": "cfe28db9-1528-4bd0-a1a2-940d6fd47771",
-          "width": 0,
-          "x": 448,
-          "y": 192,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "Game",
-          "name": "Ball",
-          "persistentUuid": "6e915cf0-2846-4874-9af0-4bcd942adca7",
-          "width": 0,
-          "x": 800,
-          "y": 448,
-          "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1791,207 +1739,7 @@
           "initialVariables": []
         },
         {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "SpawnPoint",
-          "opacity": 0,
-          "persistentUuid": "73cc7362-e7c2-4f7d-a4bc-035c397373e8",
-          "width": 0,
-          "x": 800,
-          "y": 480,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "SpawnPoint",
-          "opacity": 0,
-          "persistentUuid": "8eef4ddd-9639-4aa8-975c-238c911a4a8f",
-          "width": 0,
-          "x": 507,
-          "y": 478,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "SpawnPoint",
-          "opacity": 0,
-          "persistentUuid": "5361e127-7b53-4a3f-a889-894ec3e8b08c",
-          "width": 0,
-          "x": 571,
-          "y": 478,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "SpawnPoint",
-          "opacity": 0,
-          "persistentUuid": "89029c71-f057-4980-9385-c09e00d0834f",
-          "width": 0,
-          "x": 763,
-          "y": 318,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "SpawnPoint",
-          "opacity": 0,
-          "persistentUuid": "0303003b-598c-4d5a-b9d3-c6a0d5347aa8",
-          "width": 0,
-          "x": 443,
-          "y": 254,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "SpawnPoint",
-          "opacity": 0,
-          "persistentUuid": "9131d4f8-fb74-4f81-9b07-063b4bdf8a5b",
-          "width": 0,
-          "x": 315,
-          "y": 414,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "SpawnPoint",
-          "opacity": 0,
-          "persistentUuid": "35b1fd7a-29f3-4551-b561-4f574c0bdaad",
-          "width": 0,
-          "x": 315,
-          "y": 574,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "SpawnPoint",
-          "opacity": 0,
-          "persistentUuid": "3fb1bdf1-3470-4666-8482-8781b1df7f3d",
-          "width": 0,
-          "x": 155,
-          "y": 510,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "Game",
-          "name": "Ball",
-          "persistentUuid": "c062fc39-429b-4802-817b-ece93f87e325",
-          "width": 0,
-          "x": 288,
-          "y": 352,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "Game",
-          "name": "Ball",
-          "persistentUuid": "c736955b-182c-44e5-b19a-911451bdd9c4",
-          "width": 0,
-          "x": 128,
-          "y": 480,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "Game",
-          "name": "Ball",
-          "persistentUuid": "18cbb39b-7d30-48c1-9b47-e98717b2d105",
-          "width": 0,
-          "x": 288,
-          "y": 544,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "Game",
-          "name": "Ball",
-          "persistentUuid": "9f7d6ab4-8d1d-4259-8f37-a966a8063f49",
-          "width": 0,
-          "x": 736,
-          "y": 288,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
+          "angle": 107,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -1999,8 +1747,8 @@
           "name": "Spike",
           "persistentUuid": "01b92f11-3093-48e1-b0d5-0ab863550756",
           "width": 0,
-          "x": 640,
-          "y": 192,
+          "x": 616,
+          "y": 222,
           "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
@@ -2015,8 +1763,8 @@
           "name": "Spike",
           "persistentUuid": "7bb7edf1-2886-408c-ac63-2bf54274dfea",
           "width": 0,
-          "x": 896,
-          "y": 352,
+          "x": 916,
+          "y": 344,
           "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
@@ -2051,6 +1799,150 @@
           "x": 630,
           "y": 721,
           "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Game",
+          "name": "SpawnPoint",
+          "persistentUuid": "b7f6a5d8-0865-4994-af22-e2b068f92c0d",
+          "width": 0,
+          "x": 832,
+          "y": 480,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Game",
+          "name": "SpawnPoint",
+          "persistentUuid": "155df606-5a1a-428d-90dc-5f2fc0af365d",
+          "width": 0,
+          "x": 1147,
+          "y": 510,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Game",
+          "name": "SpawnPoint",
+          "persistentUuid": "ec6d8154-a52b-4622-a8d6-80bfad8e202a",
+          "width": 0,
+          "x": 1019,
+          "y": 382,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Game",
+          "name": "SpawnPoint",
+          "persistentUuid": "bc4fa5c9-5224-4450-a305-7ae7fe59caf8",
+          "width": 0,
+          "x": 763,
+          "y": 318,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Game",
+          "name": "SpawnPoint",
+          "persistentUuid": "b56f2b90-8474-4503-8f88-bf9c54e49a0c",
+          "width": 0,
+          "x": 443,
+          "y": 262,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Game",
+          "name": "SpawnPoint",
+          "persistentUuid": "29f888cd-eb00-4cb1-b081-5777b41b917b",
+          "width": 0,
+          "x": 283,
+          "y": 574,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Game",
+          "name": "SpawnPoint",
+          "persistentUuid": "8b4b69a7-7f18-4464-9fe9-32780ec3f2d1",
+          "width": 0,
+          "x": 347,
+          "y": 382,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Game",
+          "name": "SpawnPoint",
+          "persistentUuid": "a726a0c0-4283-47cb-9a20-95567f86e9a0",
+          "width": 0,
+          "x": 539,
+          "y": 446,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Game",
+          "name": "SpawnPoint",
+          "persistentUuid": "d13a0043-a3c0-4392-98b0-30f59d26556d",
+          "width": 0,
+          "x": 123,
+          "y": 490,
+          "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5897,6 +5789,8 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "PlatformerObject",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "acceleration": 1500,
               "canGoDownFromJumpthru": false,
               "canGrabPlatforms": false,
@@ -5909,9 +5803,7 @@
               "ladderClimbingSpeed": 150,
               "maxFallingSpeed": 700,
               "maxSpeed": 250,
-              "name": "PlatformerObject",
               "slopeMaxAngle": 60,
-              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "useLegacyTrajectory": false,
               "xGrabTolerance": 10,
               "yGrabOffset": 0
@@ -6342,6 +6234,8 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "Pathfinding",
+              "type": "PathfindingBehavior::PathfindingBehavior",
               "acceleration": 40,
               "allowDiagonals": true,
               "angleOffset": 15,
@@ -6352,10 +6246,8 @@
               "gridOffsetX": 0,
               "gridOffsetY": 0,
               "maxSpeed": 20,
-              "name": "Pathfinding",
               "rotateObject": true,
-              "smoothingMaxCellGap": 1,
-              "type": "PathfindingBehavior::PathfindingBehavior"
+              "smoothingMaxCellGap": 1
             }
           ],
           "animations": [
@@ -6484,10 +6376,10 @@
           "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -6893,6 +6785,14 @@
               "parameters": [
                 "Game_state"
               ]
+            },
+            {
+              "type": {
+                "value": "Visible"
+              },
+              "parameters": [
+                "SpawnPoint"
+              ]
             }
           ],
           "actions": [
@@ -6914,6 +6814,14 @@
               "parameters": [
                 "Game_state"
               ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "SpawnPoint"
+              ]
             }
           ]
         },
@@ -6927,26 +6835,6 @@
               "parameters": [
                 ""
               ]
-            },
-            {
-              "type": {
-                "value": "CompareTimer"
-              },
-              "parameters": [
-                "SpawnPoint",
-                "\"Spawn balls\"",
-                ">",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "AjoutHasard"
-              },
-              "parameters": [
-                "",
-                "SpawnPoint"
-              ]
             }
           ],
           "actions": [
@@ -6958,26 +6846,37 @@
                 "",
                 "\"Ball Spawn\""
               ]
-            },
+            }
+          ],
+          "events": [
             {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Ball",
-                "SpawnPoint.X()",
-                "SpawnPoint.Y()",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ResetTimer"
-              },
-              "parameters": [
-                "",
-                "\"Ball Spawn\""
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "SpawnPoint",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Ball",
+                    "SpawnPoint.X()",
+                    "SpawnPoint.Y()",
+                    "\"Game\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Ball",
+                    "Animation",
+                    "=",
+                    "\"pump\""
+                  ]
+                }
               ]
             }
           ]
@@ -7086,6 +6985,16 @@
             },
             {
               "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "BallsDestroyed",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
                 "value": "ScalableCapability::ScalableBehavior::SetValue"
               },
               "parameters": [
@@ -7093,6 +7002,60 @@
                 "Scale",
                 "+",
                 ".1"
+              ]
+            }
+          ],
+          "variables": [
+            {
+              "name": "BallDestroyed",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "BallsDestroyed",
+                ">=",
+                "3"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "BallsDestroyed",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Ball",
+                "Animation",
+                "=",
+                "\"pump\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"Ball Spawn\""
               ]
             }
           ]
@@ -7130,6 +7093,25 @@
               "parameters": [
                 "Game_state",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "GameOver",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"Restart Game\""
               ]
             }
           ]
@@ -7190,6 +7172,119 @@
                 "Game_state",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "GameOver",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"Restart Game\""
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Reload Game",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "GameOver",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"Restart Game\"",
+                ">",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Game: Bode\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Camera",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetCameraCenterX"
+              },
+              "parameters": [
+                "",
+                "=",
+                "lerp(CameraCenterX(),Player.X(),0.05)",
+                "\"Game\"",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             }
           ]
         }
@@ -7249,7 +7344,7 @@
           "cameraType": "",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
-          "isLocked": true,
+          "isLocked": false,
           "name": "Decoration",
           "renderingType": "2d",
           "visibility": true,
